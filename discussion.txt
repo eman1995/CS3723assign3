@@ -1,0 +1,6 @@
+Which version(s) allocate memory?                   mmm3.c  mmm4.c  mmm5.c
+Which version(s) are unsafe when multi-threaded?    mmm2.c  mmm3.c
+Which version is the hardest to read an maintain?   mmm6.c
+Which version has the most redundant code?          mmm1.c
+Which version(s) are closest to call-by-name?       mmm7.c
+Which version(s) are closest to call-by-reference?  mmm4.c  mmm6.c

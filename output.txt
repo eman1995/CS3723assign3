@@ -1,0 +1,8 @@
+Min=100 Max=199 Mean=149.50	mmm1
+Min=100 Max=199 Mean=149.50	mmm2
+Min=100 Max=199 Mean=149.50	mmm3
+Min=100 Max=199 Mean=149.50	mmm4
+Min=100 Max=199 Mean=149.50	mmm5
+Min=100 Max=199 Mean=149.50	mmm6
+Min=100 Max=199 Mean=149.50	mmm7
+Min = 100, Max = 199, Mean = 149.50	mmm.py
