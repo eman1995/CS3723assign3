@@ -8,7 +8,8 @@ static int mmm1a(int *array, int size) {
   int min = INT_MAX;
   int i;
   for (i = 0; i < size; i++) {
-    // TBD
+      if ( array[i] < min )
+          min = array[i];
   }
   return min;
 }
@@ -17,7 +18,8 @@ static int mmm1b(int *array, int size) {
   int max = INT_MIN;
   int i;
   for (i = 0; i < size; i++) {
-    // TBD
+      if ( array[i] > max )
+          max = array[i];
   }
   return max;
 }
@@ -26,9 +28,10 @@ static double mmm1c(int *array, int size) {
   double sum = 0;
   int i;
   for (i = 0; i < size; i++) {
-    // TBD
+    sum += array[i];
   }
-  return // TBD
+    sum /= size;
+  return sum;
 }
 
 int main(int argc, char *argv[]) {

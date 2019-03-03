@@ -12,7 +12,21 @@ typedef struct MMM {
 
 static mmm_t *mmm5(int *array, int size) {
   mmm_t *mmm = (mmm_t *) malloc(sizeof(mmm_t));
-    // TBD
+    
+    int i;
+    mmm->min = array[i];
+    mmm->max = array[i];
+    
+    for ( i = 0; i < size; i++ ){
+        mmm->mean += array[i];
+        if ( array[i] < mmm->min )
+            mmm->min = array[i];
+        if ( array[i] > mmm->max )
+            mmm->max = array[i];
+    }
+    mmm->mean = mmm->mean / size;
+
+    return mmm;
 }
 
 int main(int argc, char *argv[]) {

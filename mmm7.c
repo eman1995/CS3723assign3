@@ -7,9 +7,16 @@
 #define mmm7(ar, sz, mn, mx, me) \
   mn = INT_MAX; \
   mx = INT_MIN; \
-  double sum = 0
-  // TBD
-
+  double sum = 0; \
+  for(i = 0; i < sz; i++){ \
+    sum += ar[i]; \
+    if(ar[i] < mn ) \
+        mn = ar[i]; \
+    if(ar[i] > mx ) \
+        mx = ar[i]; \
+    } \
+  me = sum / SZ; \
+    
 int main(int argc, char *argv[]) {
   int data[SZ];
   int i;

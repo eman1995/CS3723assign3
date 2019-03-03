@@ -12,7 +12,18 @@ typedef struct MMM {
 
 static mmm_t *mmm3(int *array, int size) {
   static mmm_t mmm;
-  // TBD
+  mmm.min = array[1];
+  mmm.max = array[1];
+
+  int i;
+  for (i = 0; i < size; i++){
+      mmm.mean += array[i];
+      if ( array[i] < mmm.min )
+          mmm.min = array[i];
+      if ( array[i] > mmm.max )
+          mmm.max = array[i];
+  }
+  mmm.mean = mmm.mean / size;
   return &mmm;
 }
 

@@ -11,7 +11,20 @@ typedef struct MMM {
 } mmm_t;
 
 static void mmm4(int *array, int size, mmm_t *mmm) {
-    // TBD
+    int i;
+
+    mmm->min = array[0];
+    mmm->max = array[0];
+
+    for ( i = 0; i < size; i++ ){
+        mmm->mean += array[i];
+        if ( array[i] < mmm->min )
+            mmm->min = array[i];
+        if ( array[i] > mmm->max )
+            mmm->max = array[i];
+    }
+
+    mmm->mean = mmm->mean / size;
 }
 
 int main(int argc, char *argv[]) {

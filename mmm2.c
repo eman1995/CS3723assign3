@@ -14,7 +14,12 @@ static void mmm2(int *array, int size) {
   double sum = 0;
   int i;
   for (i = 0; i < size; i++) {
-    // TBD
+
+      sum += array[i];
+      if ( array[i] < min )
+          min = array[i];
+      if ( array[i] > max )
+          max = array[i];
   }
   mean = sum / size;
 }
